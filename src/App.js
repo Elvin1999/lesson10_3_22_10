@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import MyComponent from "./MyComponent";
+import TimerComponent from "./TimerComponent";
+import { useState } from "react";
 
 function App() {
+  const [isDone, setIsDone] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyComponent title="Today weather is so hot..."></MyComponent>
+      
+
+      {/* {isDone && <TimerComponent></TimerComponent>}
+      <button
+        onClick={() => {
+          setIsDone(!isDone);
+        }}
+      >
+        {isDone ? "Hide" : "Show"}
+      </button> */}
     </div>
   );
 }
